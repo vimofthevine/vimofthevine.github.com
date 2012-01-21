@@ -1,0 +1,128 @@
+/*
+ * Design by Kyle Treubig
+ * (C) 2011 Kyle Treubig
+ */
+
+/*
+ * CSS modifications for mobile browsers
+ */
+
+/*
+ * Table of Contents
+ * - Global Styles
+ * - Structure (positioning)
+ * - Borders & Backgrounds
+ * - Navigation
+ * - Headers
+ * - Content (text)
+ * - Links
+ * - Forms
+ * - Lists
+ * - Common Classes
+ */
+
+/* ---------------------------------- */
+/* ------- TOC:Global Styles -------- */
+/* ---------------------------------- */
+
+/* ---------------------------------- */
+/* -- TOC:Structure (positioning) --- */
+/* ---------------------------------- */
+
+#wrapper {
+	margin:5px auto 5px;
+	width:98%;
+}
+
+#logo {
+	display:none;
+}
+
+header hgroup {
+	margin:5px 5px 0;
+	width:98%;
+}
+
+nav {
+	height:auto;
+}
+
+.advertisement {
+	display:none;
+}
+
+aside {
+	float:none;
+	margin:0px;
+	width:auto;
+}
+
+/* ---------------------------------- */
+/* --- TOC:Borders & Backgrounds ---- */
+/* ---------------------------------- */
+
+aside section {
+	background:transparent;
+
+	border:none;
+
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+	-ms-filter:none;
+	filter:none;
+}
+
+/* ---------------------------------- */
+/* --------- TOC:Navigation --------- */
+/* ---------------------------------- */
+
+nav li {
+	display:block;
+	margin:0 5px;
+}
+
+/* ---------------------------------- */
+/* ---------- TOC:Headers ----------- */
+/* ---------------------------------- */
+
+header hgroup h2 {
+	padding:5px 0 5px 5px;
+}
+
+article h1 { padding:10px 0 17px 10px; }
+
+#content h2 { padding:15px 0 17px 10px; }
+
+#content h3 { padding:0 0 17px 10px; }
+
+/* ---------------------------------- */
+/* ------- TOC:Content (text) ------- */
+/* ---------------------------------- */
+
+p { padding:0 10px 17px; }
+
+aside p {
+	padding:5px;
+}
+
+aside hr {
+	margin:0 5px;
+}
+
+/* ---------------------------------- */
+/* ----------- TOC:Links ------------ */
+/* ---------------------------------- */
+
+/* ---------------------------------- */
+/* ----------- TOC:Lists ------------ */
+/* ---------------------------------- */
+
+/* ---------------------------------- */
+/* ----------- TOC:Forms ------------ */
+/* ---------------------------------- */
+
+/* ---------------------------------- */
+/* ------- TOC:Common Classes ------- */
+/* ---------------------------------- */
+

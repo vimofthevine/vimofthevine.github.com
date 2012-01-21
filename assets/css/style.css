@@ -1,0 +1,416 @@
+/*
+ * Design by Kyle Treubig
+ * (C) 2011 Kyle Treubig
+ */
+
+/*
+ * Table of Contents
+ * - Global Styles
+ * - Structure (positioning)
+ * - Borders & Backgrounds
+ * - Navigation
+ * - Headers
+ * - Content (text)
+ * - Links
+ * - Forms
+ * - Lists
+ * - Common Classes
+ */
+
+/* ---------------------------------- */
+/* ------- TOC:Global Styles -------- */
+/* ---------------------------------- */
+
+header, hgroup, footer, aside, nav, article, section { display:block; }
+
+h1 { font-size:36px; }
+h2 { font-size:24px; }
+h3 { font-size:21px; }
+h4 { font-size:18px; }
+p  { font-size:14px; }
+
+/* ---------------------------------- */
+/* -- TOC:Structure (positioning) --- */
+/* ---------------------------------- */
+
+#wrapper { /* The main content container for the site */
+	margin:15px auto 15px;
+	width:640px;
+}
+
+header {
+	height:auto;
+}
+
+header hgroup {
+	float:left;
+	margin:40px 0 0 40px;
+	width:360px;
+}
+
+nav {
+	clear:both;
+	height:25px;
+}
+
+.leaderboard {
+	clear:both;
+	height:auto;
+	margin:10px 0 10px -44px;
+	width:728px;
+}
+
+#content {
+	clear:both;
+}
+
+aside {
+	float: right;
+	height: auto;
+	margin: 15px -80px 5px 10px;
+}
+
+aside section {
+	margin:0 0 10px;
+	width: 160px; /* 2 grids */
+}
+
+aside.wide section {
+	width: 240px; /* 3 grids */
+}
+
+footer {
+	clear:both;
+}
+
+/* ---------------------------------- */
+/* --- TOC:Borders & Backgrounds ---- */
+/* ---------------------------------- */
+
+body { background:#585b5d; }
+
+#wrapper {
+	background: #e5e8e9; /* Old browsers */
+	background: -moz-linear-gradient(top, #e5e8e9 0%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5e8e9), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #e5e8e9 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #e5e8e9 0%,#ffffff 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #e5e8e9 0%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(top, #e5e8e9 0%,#ffffff 100%); /* W3C */
+
+	/*
+	 * This cuts off the side menu, so dropping down to solid color instead
+	 *
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e8e9', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 *
+	 */
+
+	border:1px solid #183947;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+
+	box-shadow:3px 3px 10px #000;
+	-moz-box-shadow:3px 3px 10px #000;
+	-webkit-box-shadow:3px 3px 10px #000;
+
+	/*
+	 * This cuts off the side menu, so no shadows for IE
+	 *
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')"; /* IE8 *
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000'); /* IE5.5-7 *
+	 */
+}
+
+nav {
+	box-shadow:0px 1px 2px #000;
+	-moz-box-shadow:0px 1px 2px #000;
+	-webkit-box-shadow:0px 1px 2px #000;
+
+	/*
+	 * This gets incorrectly applied to the text, not the nav element.
+	 * So no shadows for IE.
+	 *
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=180, Color='#000000')"; /* IE8 *
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=180, Color='#000000'); /* IE5.5-7 *
+	 */
+}
+
+.leaderboard {
+	background:red;
+
+	box-shadow:2px 2px 2px #000;
+	-moz-box-shadow:2px 2px 2px #000;
+	-webkit-box-shadow:2px 2px 2px #000;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#000000')"; /* IE8 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#000000'); /* IE5.5-7 */
+}
+
+aside section {
+	background: #d3d5d6; /* Old browsers */
+	background: -moz-linear-gradient(top, #d3d5d6 0%, #e5e8e9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d3d5d6), color-stop(100%,#e5e8e9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #d3d5d6 0%,#e5e8e9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #d3d5d6 0%,#e5e8e9 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #d3d5d6 0%,#e5e8e9 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3d5d6', endColorstr='#e5e8e9',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #d3d5d6 0%,#e5e8e9 100%); /* W3C */
+
+	border:1px solid #565e62;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+
+	box-shadow:2px 2px 5px #000;
+	-moz-box-shadow:2px 2px 5px #000;
+	-webkit-box-shadow:2px 2px 5px #000;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color='#000000')"; /* IE8 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color='#000000'); /* IE5.5-7 */
+}
+
+article {
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+
+	box-shadow:2px 2px 4px #acafb0;
+	-moz-box-shadow:2px 2px 4px #acafb0;
+	-webkit-box-shadow:2px 2px 4px #acafb0;
+
+	/*
+	 * This gets incorrectly applied to the text, not the article element.
+	 * So no shadows for IE.
+	 *
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#acafb0')"; /* IE8 *
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#acafb0'); /* IE5.5-7 *
+	 */
+}
+
+/*
+ * For every other article where the picture is on the right,
+ * set a minimum height equal to:
+ * h1's top margin + h1's font size + h1's bottom margin + img height + img bottom margin
+ */
+article:nth-child(even) {
+	min-height:188px;
+}
+
+/*
+ * For every other article where the picture is on the left,
+ * set a minimum height equal to:
+ * img top margin + img height + img bottom margin
+ */
+article:nth-child(odd) {
+	min-height:150px;
+}
+
+/* ---------------------------------- */
+/* --------- TOC:Navigation --------- */
+/* ---------------------------------- */
+
+nav li {
+	display:inline;
+	line-height:25px;
+	margin:0 0 0 10px;
+}
+
+a {
+	color:#0c7bab;
+	color:#1c9216;
+	color:#11824b;
+	color:#07972b;
+	text-decoration:none;
+}
+
+a:hover {
+	color:#0c5573;
+	color:#0a5a1e;
+}
+
+/* ---------------------------------- */
+/* ---------- TOC:Headers ----------- */
+/* ---------------------------------- */
+
+header hgroup h1 {
+	text-shadow:1px 1px 1px #6e6f6f;
+}
+
+header hgroup h2 {
+	text-shadow:1px 1px 1px #afb0b0;
+}
+
+header hgroup h2 {
+	padding:5px 0 0 15px;
+}
+
+#content h2 {
+	padding: 15px 0 17px 15px;
+}
+
+#content h3 {
+	padding: 0 0 17px 15px;
+}
+
+/* Use the normal h3 size for the article's h1 headers */
+article h1 {
+	font-size:21px;
+	padding:15px 0 17px 15px;
+}
+
+/* ---------------------------------- */
+/* ------- TOC:Content (text) ------- */
+/* ---------------------------------- */
+
+#logo {
+	/* probably won't be here later */
+	max-height:150px;
+	max-width:150px;
+	/* probably won't be here later */
+
+	border-radius:15px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	float:right;
+	margin:10px 40px 10px 0;
+}
+
+p, blockquote, #content li {
+	font-family: times new roman;
+	font-size: 14px;
+	line-height: 17px;
+}
+
+p, blockquote {
+	padding:0 15px 17px;
+	text-indent:15px;
+}
+
+#content > ul, #content > ol {
+	padding:0 30px 17px;
+}
+
+blockquote {
+	border-left:2px solid #585b5d;
+	margin:0 0 17px 15px;
+	padding:0 30px 0 15px;
+	text-indent:0px;
+}
+
+p.note, p.preface {
+	background:#eee;
+	background:#eef3f6;
+	border:1px solid #bc0f0f;
+	border-color:#2b424d;
+	border-left-width:15px;
+	clear:both;
+	font-style:italic;
+	margin:0 15px 17px;
+	padding:5px 10px;
+	text-indent:0px;
+}
+
+p.preface {
+	margin:15px 15px 0px;
+}
+
+#content img {
+	margin:0 15px 17px;
+	max-width:610px;
+}
+
+#content img.left, #content img.right {
+	max-width:400px; /* don't take up more than 2/3 of the page width */
+}
+
+#content img.left {
+	float:left;
+}
+
+#content img.right {
+	float:right;
+}
+
+aside p {
+	padding:10px;
+}
+
+aside hr {
+	color:#e3eaed;
+	margin:0 10px;
+}
+
+article {
+	margin:0 10px 12px; /* drop shadow creates optical illusion */
+}
+
+/* probably won't need with when real imgs used */
+article .img {
+	background:#ccc;
+	height:120px;
+	width:120px;
+}
+
+/*
+ * For every other article put the picture on the left,
+ * below the article header
+ */
+article:nth-child(even) div {
+	float:left;
+	margin:0 15px;
+}
+
+/*
+ * For every other article put the picture on the right,
+ * alongside the article header
+ */
+article:nth-child(odd) div {
+	float:right;
+	margin:-38px 15px 0;
+}
+
+footer {
+	text-align: center;
+}
+
+footer p {
+	padding:0px;
+	margin:15px auto 15px;
+}
+
+/* ---------------------------------- */
+/* ----------- TOC:Links ------------ */
+/* ---------------------------------- */
+
+/* ---------------------------------- */
+/* ----------- TOC:Lists ------------ */
+/* ---------------------------------- */
+
+aside ol {
+	margin:10px;
+}
+
+aside ol ol {
+	margin:0 0 0 10px;
+}
+
+#content ol li {
+	list-style-position:inside;
+	list-style-type:decimal;
+}
+
+#content ul li {
+	list-style-position:inside;
+	list-style-type:disc;
+}
+
+#content ul ul, #content ul ol, #content ol ul, #content ol ol {
+	padding:0 0 0 15px;
+}
+
+/* ---------------------------------- */
+/* ----------- TOC:Forms ------------ */
+/* ---------------------------------- */
+
+/* ---------------------------------- */
+/* ------- TOC:Common Classes ------- */
+/* ---------------------------------- */
+
