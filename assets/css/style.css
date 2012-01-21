@@ -35,7 +35,8 @@ p  { font-size:14px; }
 
 #wrapper { /* The main content container for the site */
 	margin:15px auto 15px;
-	width:640px;
+	/*width:640px;*/
+	width:728px;
 }
 
 header {
@@ -56,7 +57,8 @@ nav {
 .leaderboard {
 	clear:both;
 	height:auto;
-	margin:10px 0 10px -44px;
+	/*margin:10px 0 10px -44px;*/
+	margin:10px 0 10px 0;
 	width:728px;
 }
 
@@ -133,16 +135,6 @@ nav {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=180, Color='#000000')"; /* IE8 *
 	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=180, Color='#000000'); /* IE5.5-7 *
 	 */
-}
-
-.leaderboard {
-	background:red;
-
-	box-shadow:2px 2px 2px #000;
-	-moz-box-shadow:2px 2px 2px #000;
-	-webkit-box-shadow:2px 2px 2px #000;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#000000')"; /* IE8 */
-	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#000000'); /* IE5.5-7 */
 }
 
 aside section {
